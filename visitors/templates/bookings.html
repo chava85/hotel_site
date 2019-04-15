@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+ <div class="container">
+    <div class="row">
+      <div class="col-8 offset-4">
+          <div class="card-header">
+            <h5 class="text-center">Book a Room</h5>
+          </div>
+
+          <div class="card-body">
+            <form method="POST">
+              {% csrf_token %}
+              <label>First Name</label>
+              <input class="form-control" type="text" name="first_name">
+
+              <label class="mt-4">Last Name</label>
+              <input class="form-control" type="text" name="last_name">
+
+
+              <label class="mt-4">phone_number</label>
+              <input class="form-control" type="text" name="mobile">
+
+              <label class="mt-4">start_date</label>
+              <input class="form-control" type="text" name="mobile">
+
+              <label class="mt-4">end_date</label>
+              <input class="form-control" type="text" name="mobile">
+
+
+
+
+
+              <button type="submit" class="btn btn-outline-primary btn-block mt-4">Submit</button>
+            </form>
+          </div>
+        </div>
+    </div>
+  </div>
+
+
+
+{% endblock %}
