@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-class Customer(models.Model):
+class User(models.Model):
     '''To do: implement this model'''
     first_name = models.CharField(max_length=200)
     last_name = models.IntegerField(default=0)
