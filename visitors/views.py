@@ -23,13 +23,25 @@ def bookings(request):
 def show_vacancies():
 	pass
 
-def login(request):
-	
-	if request.method == 'POST':
-		form = UserForm(request.POST)
-		if form.is_valid():
-			
-			return redirect('bookings.html')
-						
 
+def bookings(request):
+	if request.method == 'POST':
+		post = request.POST
+		first_name = post['first_name']
+		last_name = post['last_name']
+		phone_number = post['phone_number']
+
+		user = User(first_name=first_name, last_name=last_name,
+			phone_number=phone_number)
+
+		user.save()
+		print(person)
+
+
+
+	return render(request, 'bookings.html')
+
+
+def login(request):
 	return render(request, 'login.html')
+
