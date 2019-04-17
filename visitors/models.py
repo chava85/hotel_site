@@ -1,12 +1,13 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
-class User(models.Model):
-    '''To do: implement this model'''
-    first_name = models.CharField(max_length=200)
-    last_name = models.CharField(max_length=200)
-    phone_number = models.IntegerField()
+# class User(models.Model):
+#     '''To do: implement this model'''
+#     first_name = models.CharField(max_length=200)
+#     last_name = models.CharField(max_length=200)
+#     phone_number = models.IntegerField()
 
 
 class Room(models.Model):
